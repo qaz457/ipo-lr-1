@@ -1,7 +1,13 @@
-from math import fabs,exp,tan,pow
-x = float(input("Введите x:"))
-y = float(input("Введите y:"))
-z = float(input("Введите z:"))
+import math
 
-h = ( (pow(x,y+1) + exp(y-1)) / (1+(x*(fabs(y-tan(z)))) ) * (1+(fabs(y-x))) + ((pow(fabs(y-x),2)) / 2) - (pow(fabs(y-x),3) / 3) )
-print(f"Ответ искомого выражения:{h}")
+x = float(input("Введите значение x: "))
+y = float(input("Введите значение y: "))
+
+fabs = math.fabs(x - y)
+num = (8 + fabs**2 + 1) ** (1/3)
+den = x**2 + y**2 + 2
+exp = math.exp(fabs)
+
+u = num / den - exp
+
+print(f"Значение u: {u}")

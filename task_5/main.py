@@ -1,8 +1,9 @@
-number_8 = input("Введите число из 8 разрядов")
-sum = 0
-if len(number_8) == 8:
-    for i in number_8:
-        sum += int(i)
-    print(f"Сумма цифр числа:{sum}")
-else:
-    print("Неккоркетный ввод числа")
+class_1 = int(input("введите количество учеников в 1 классе"))
+class_2 = int(input("введите количество учеников во 2 классе"))
+class_3 = int(input("введите количество учеников в 3 классе"))
+
+class_all = class_1 + class_2 + class_3
+
+parta = class_all // 2 + class_all % 2
+
+print(f"Нужное количество пар равно - {parta}")
